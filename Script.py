@@ -10,8 +10,6 @@ class script(object):
     HELP_TXT = """𝙷𝙴𝚈 {}
 𝘏𝘦𝘳𝘦 𝘐𝘴 𝘛𝘩𝘦 𝘏𝘦𝘭𝘱 𝘍𝘰𝘳 𝘔𝘺 𝘊𝘰𝘮𝘮𝘢𝘯𝘥𝘴."""
     ABOUT_TXT = """
-𝗧𝗛𝗜𝗦 TomHolland 𝗔𝗕𝗢𝗨𝗧 𝗠𝗦𝗚
-✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵
 ╔════❰ ꪖ᥇ꪮꪊ𝓽 ꪑ𝘴ᧁ ❱═❍⊱❁۪۪
 ║╭━━━━━━━━━━━━━━━➣ 
 ║┣⪼ 𝙈𝙔 𝙉𝘼𝙈𝙀 - <a href="https://t.me/No_Way_Home_bot"> TomHolland </a>
@@ -24,11 +22,11 @@ class script(object):
 ║╰━━━━━━━━━━━━━━━➣ ╚══════════════════❍⊱❁۪۪"""
     SOURCE_TXT = """<b>NOTE:</b>
 - 𝑰 𝒂𝒎  𝒂 𝒐𝒑𝒆𝒏 𝒔𝒐𝒖𝒓𝒄𝒆 𝒑𝒓𝒐𝒋𝒆𝒄𝒕. 
-- ՏOᑌᖇᑕᗴ ᑕOᗪᗴ - <a href="https://t.me/PeterParkerspide"> 𝗖𝗟𝗜𝗖𝗞 𝗛𝗘𝗥𝗘 </a>
+- ՏOᑌᖇᑕᗴ ᑕOᗪᗴ - <a https://github.com/LolanBot18/TomHollandv2"> 𝗖𝗟𝗜𝗖𝗞 𝗛𝗘𝗥𝗘 </a>
 
 
 𝗠𝗔𝗦𝗧𝗘𝗥:
-<a href="https://t.me/No_Way_Home_bot"> TomHolland </a>"""
+<a href="https://github.com/LolanBot18/TomHollandv2"> TomHolland </a>"""
     WHOIS_TXT ="""<b>WHOIS MODULE</b>
 
 Note:- Give a user details
