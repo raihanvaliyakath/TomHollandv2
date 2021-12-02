@@ -32,6 +32,9 @@ class script(object):
 Note:- Give a user details
 
 •/whois :-give a user full details"""
+    ALIVE_TXT ="""<b>ALIVE MODULE</b>
+• /alive - check me alive or dead🤧
+Just for a rasam😂"""
     SONG_TXT ="""<b>SONG MODULE</b>
 Song Download
 Song Download Module, For Those Who Love Music
@@ -64,21 +67,6 @@ Everyone can use this command , if spaming happens bot will automatically ban yo
 ◉ /Pin :- Pin The Message You Replied To Message To Send A Notification To Group Members
 
 ◉ /Unpin :- Unpin The Current Pinned Message. If Used As A Reply, Unpins The Replied To Message"""
-
-    CORONA_TEXT ="""<b>Here is the help for the coron information module</b>
-
-➡️ /covid <code>(countryname)</code> <b>you can find a corona information of every country</b>
-
-➡️ <b>example</b> : - /covid </code>india</code>"""
-
-    COUNTRY_TEXT = """<b>here is the help for County information module</b>
-
-<b>I am a country information finder</b>
-<b>/country [countryname]</b> 
-
-<b>I can find information of any country of the world</b>
-"""
-
     FUN_TXT ="""<b>FUN MODULE</b> 
     
 <b>🎲 NOTHING MUCH JUST SOME FUN THINGS</b>
