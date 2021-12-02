@@ -438,10 +438,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕',url='https://t.me/No_Way_Home_bot?startgroup=true')
+            InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url='http://t.me/dqautofl_bot?startgroup=true')
             ],[
-            InlineKeyboardButton('©️ᴄʜᴀɴɴᴇʟ', url='https://t.me/updatechannel8986'),
-            InlineKeyboardButton('♻️Gʀᴏᴜᴘ', url='https://t.me/lolangroup')
+            InlineKeyboardButton('sᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ', url='https://t.me/EDIT_REPO')
             ],[
             InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')
@@ -464,9 +464,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('📄 𝐢𝐧𝐟𝐨 ', callback_data='info'),
             InlineKeyboardButton('🖥️ 𝐩𝐚𝐬𝐭𝐞 ', callback_data='paste')
             ],[
-            InlineKeyboardButton('💣 𝐩𝐮𝐫𝐠𝐞 ', callback_data='purge'),
-            InlineKeyboardButton('corona', callback_data='coronainfo'),
-            InlineKeyboardButton ('Country',callback_data='countryinfo')
+            InlineKeyboardButton('💣 𝐩𝐮𝐫𝐠𝐞 ', callback_data='purge')
             ],[
             InlineKeyboardButton('🔇 𝐫𝐞𝐬𝐭𝐫𝐢𝐜𝐭 ', callback_data='restric'),
             InlineKeyboardButton('🔍 𝐬𝐞𝐚𝐫𝐜𝐡 ', callback_data='search'),
@@ -474,6 +472,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],[
             InlineKeyboardButton('🤔 𝐰𝐡𝐨𝐢𝐬 ', callback_data='whois'),
             InlineKeyboardButton('🤡 𝐟𝐮𝐧 ', callback_data='fun')
+            ],[
+            InlineKeyboardButton('🥱 𝐚𝐥𝐢𝐯𝐞 ', callback_data='alive')
             ],[
             InlineKeyboardButton('🎶 𝐬𝐨𝐧𝐠 ', callback_data='song'),
             InlineKeyboardButton('🖨️ 𝐣𝐬𝐨𝐧 ', callback_data='json'),
@@ -504,6 +504,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.edit_text(
             text=script.ABOUT_TXT.format(temp.B_NAME),
             disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "alive":
+        buttons = [[
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.ALIVE_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
         )
@@ -662,7 +672,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-
     elif query.data == "search":
         buttons = [[
             InlineKeyboardButton('« Back', callback_data='help')
@@ -673,28 +682,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode='html'
-        )
-     elif query.data == "coronainfo": 
-        buttons = [[
-            InlineKeyboardButton('◀️ back', callback_data='help'),
-            InlineKeyboardButton('🏘 home', callback_data='start')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=CORONA_TEXT,
-            reply_markup=reply_markup,
-            parse_mode="html"
-        )
-    elif query.data == "countryinfo": 
-        buttons = [[
-            InlineKeyboardButton('◀️ back', callback_data='help'),
-            InlineKeyboardButton('🏘 home', callback_data='start')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=COUNTRY_TEXT,
-            reply_markup=reply_markup,
-            parse_mode="html"
         )
     elif query.data == "gtrans":
         buttons = [[
