@@ -26,13 +26,12 @@ class script(object):
 
 
 𝗠𝗔𝗦𝗧𝗘𝗥:
-<a href="https://github.com/LolanBot18/TomHollandv2"> TomHolland </a>"""
+<a href="https://t.me/PeterParkerspide"> 𝑻𝑬𝑨𝑴 𝑨𝑵𝑵𝑨 </a>"""
     WHOIS_TXT ="""<b>WHOIS MODULE</b>
-
 Note:- Give a user details
 
 •/whois :-give a user full details"""
- ALIVE_TXT ="""<b>ALIVE MODULE</b>
+    ALIVE_TXT ="""<b>ALIVE MODULE</b>
 • /alive - check me alive or dead🤧
 Just for a rasam😂"""
     CORONA_TXT ="""<b>Here is the help for the coron information module</b>
