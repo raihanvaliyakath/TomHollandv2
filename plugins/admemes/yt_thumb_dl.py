@@ -1,24 +1,52 @@
+#!/usr/bin/env python3
+# Copyright (C) @ZauteKm
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+import os
+import time
+import ytthumb
 from pyrogram import Client, filters
-from info import COMMAND_HAND_LER
-from plugins.helper_functions.cust_p_filters import f_onw_fliter
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
-
-# EMOJI CONSTANTS
-BREAK_YOUR_LOVE = "💔"
-# EMOJI CONSTANTS
-
-@Client.on_message(
-    filters.command(["break", "thepp"])
-)
-async def break_thepp(client, message):
-    """ /break an @animatedbreak """
-    rep_mesg_id = message.message_id
-    if message.reply_to_message:
-        rep_mesg_id = message.reply_to_message.message_id
-    await client.send_dice(
-        chat_id=message.chat.id,
-        emoji=BREAK_YOUR_LOVE,
-        disable_notification=True,
-        reply_to_message_id=rep_mesg_id
+@Client.on_message(filters.command(["ytthumb", 'dlthumb']))
+async def send_thumbnail(bot, update):
+    message = await update.reply_text(
+        text="`Analysing...`",
+        disable_web_page_preview=True,
+        quote=True
     )
+    try:
+        if " | " in update.text:
+            video = update.text.split(" | ", -1)[0]
+            quality = update.text.split(" | ", -1)[1]
+        else:
+            video = update.text
+            quality = "sd"
+        thumbnail = ytthumb.thumbnail(
+            video=video,
+            quality=quality
+        )
+        await update.reply_photo(
+            photo=thumbnail,
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('join projects channel', url='https://telegram.me/josprojects')]]),
+            quote=True
+        )
+        await message.delete()
+    except Exception as error:
+        await message.edit_text(
+            text="**Please Use** /ytthumb (youtube link)\n\n**Example:** `/ytthumb https://youtu.be/h6PtzFYaMxQ`",
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('join projects channel', url='https://telegram.me/josprojects')]])
+        )
